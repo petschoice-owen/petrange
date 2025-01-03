@@ -1,0 +1,191 @@
+.special-offer{
+	position: relative;
+	background: white;
+	margin-left: 2px;
+	p{
+		font-size: $sz-content;
+		margin-bottom: 5px;
+	}
+	.price{
+		color: $green;
+		font-size: 1.8rem;
+		font-weight: 600;
+		margin-bottom: 1.5rem;
+		margin-top: 0.5rem;
+		text-align: left;
+		del{
+			color: $red;
+			font-size: 0.8em;
+			opacity: .5;
+    		display: inline-block;
+		}
+	}
+}
+
+.owl-dots{
+	@extend .flex;
+	@extend .jc-center;
+	margin: 5rem 0 0 0;
+	text-align: center;
+	.owl-dot{
+		margin: 0 0.5rem;
+		span{
+			display: block;
+			border-radius: 10em;
+			width: 20px;
+			height: 20px;
+			background: white;
+			@include transition(0.3s);
+		}
+		&.active{
+			span{
+				background: $black;
+			}
+		}
+		button:focus {
+    		outline: none !important;
+		}
+	}
+}
+
+.home{
+	section.bg-yellow{
+		.owl-carousel{
+			.owl-stage {
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: flex;
+			    .owl-item {
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    -webkit-box-orient: vertical;
+				    -webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				    flex-direction: column;
+				    -webkit-box-align: stretch;
+				    -ms-flex-align: stretch;
+				    align-items: stretch;
+				}
+				.special-offer {
+				    display: -webkit-box;
+				    display: -ms-flexbox;
+				    display: flex;
+				    -webkit-box-orient: vertical;
+				    -webkit-box-direction: normal;
+				    -ms-flex-direction: column;
+				    flex-direction: column;
+				    height: 100%;
+				}
+				.cs-button {
+	    			margin-top: auto;
+				}
+			}
+		}
+	}
+	/* Home Page > Radial White style */
+	.bg-yellow {
+	    position: relative;
+	    overflow: hidden;
+	    .radial-white {
+		    position: absolute;
+		    top: -20%;
+		    left: 0;
+		    right: 0;
+		    z-index: 1;
+		    width: 50%;
+		    height: 60%;
+		    margin: auto;
+		    background-color: #fff;
+		    border-radius: 50%;
+		    opacity: .5;
+		    filter: blur(100px);
+		}
+		.inner {
+		    position: relative;
+		    z-index: 2;
+		    > h2 {
+			    display: -webkit-box;
+			    display: -ms-flexbox;
+			    display: flex;
+			    margin-bottom: 0;
+			}
+		}
+	}
+}
+
+/* Home Page > Special offers section - Carousel Arrows */
+.home .bg-yellow .owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+.home .bg-yellow .owl-carousel .owl-nav button {
+    position: absolute;
+    top: -60px;
+    width: 50px;
+    height: 50px;
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+.home .bg-yellow .owl-carousel .owl-nav button:hover {
+    opacity: .6;
+}
+.home .bg-yellow .owl-carousel .owl-nav button:focus {
+    outline: none !important;
+}
+.home .bg-yellow .owl-carousel .owl-nav .owl-next {
+    left: 102%;
+    background-image: url(/wp-content/uploads/2023/11/caret-right.png);
+}
+.home .bg-yellow .owl-carousel .owl-nav .owl-prev {
+    right: 102%;
+    background-image: url(/wp-content/uploads/2023/11/caret-left.png);
+}
+.home .bg-yellow .owl-carousel .owl-nav button span {
+    font-size: 0;
+}
+@media (max-width: 1599px) {
+    .home .bg-yellow .owl-carousel .owl-nav .owl-next { 
+        left: 101%;
+    }
+    .home .bg-yellow .owl-carousel .owl-nav .owl-prev { 
+        right: 101%;
+    }
+}
+@media (max-width: 1399px) {
+    .home .bg-yellow .owl-carousel .owl-nav button {    
+        top: -55px;   
+        width: 44px;
+        height: 44px;
+        background-size: 13px;
+    }
+    .home .bg-yellow .owl-carousel .owl-nav .owl-next { 
+        left: 100.5%;
+    }
+    .home .bg-yellow .owl-carousel .owl-nav .owl-prev { 
+        right: 100.5%;
+    }
+}
+@media (max-width: 1199px) {
+    .home .bg-yellow .owl-carousel .owl-nav button {    
+        top: -50px;   
+        width: 40px;
+        height: 40px;
+        background-size: 12px;
+    }
+}
+@media (max-width: 959px) {
+    .home .bg-yellow .owl-carousel .owl-nav  {
+        display: none;
+    }
+}

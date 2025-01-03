@@ -1,0 +1,197 @@
+.icons-set{
+  background-repeat: no-repeat;
+  // background-size: 70px auto;
+  background-size: auto auto;
+  &:not(.icons-type-none){
+    min-height: 28rem;
+  }
+  background-position:
+    10px 190px,
+    10px 80px,
+    0px 0px,
+    calc(100% - 10px) 190px,
+    100% 80px,
+    calc(100% - 10px) 0px;
+  @media(min-width:$tab-wide){
+    // background-size: 100px auto;
+    background-position: 60px 90%,0 calc(90% - 100px),50px calc(90% - 178px),100% calc(90% - 90px),calc(100% - 60px) calc(90% - 20px),calc(100% - 50px) calc(90% - 165px)
+  }
+  &.icons-type{
+    &-dog{
+      @media(min-width:$tab){
+        background-image:
+          url('#{$icons}/sketched/dog/sketch-icon-ball-bounce.png'),
+          url('#{$icons}/sketched/dog/sketch-icon-bed.png'),
+          url('#{$icons}/sketched/dog/sketch-icon-bone-biscuit.png'),
+          url('#{$icons}/sketched/dog/sketch-icon-collar-2.png'),
+          url('#{$icons}/sketched/dog/sketch-icon-dog-bowl.png'),
+          url('#{$icons}/sketched/dog/sketch-icon-leash.png');
+          // url('#{$icons}/sketched/dog/sketch-icon-pawprint.png'),
+          // url('#{$icons}/sketched/dog/sketch-icon-rope-toy.png');
+      }
+    }
+    &-cats{
+      @media(min-width:$tab){
+      background-image:
+        url('#{$icons}/sketched/cat/sketch-icon-cat-bowl.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-cat-in-bed.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-collar.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-litter-tray.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-mouse.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-wool-ball.png');
+              }
+    }
+    &-wildlife{
+      @media(min-width:$tab){
+      background-image:
+        url('#{$icons}/sketched/wildlife/sketch-icon-hedgehog.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+        url('#{$icons}/sketched/sketch-icon-pet-range-star.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-pawprint.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-rope-toy.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-fish.png');
+      // background-size: 70px auto, 70px auto, 50px auto, 50px auto, 70px auto, 70px auto;
+      // @media(min-width:$tab-wide){
+      //     background-size: 100px auto, 100px auto, 60px auto, 60px auto, 100px auto, 100px auto;
+      // }
+    }
+    }
+    &-healthcare{
+      @media(min-width:$tab){
+      background-image:
+        url('#{$icons}/sketched/healthcare/sketch-icon-bubble.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-flea-treatment.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-flea.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-spray-can.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-spray.png');
+      // background-size: auto 70px, 70px auto, 70px auto, 70px auto, auto 70px, 70px auto;
+      // @media(min-width:$tab-wide){
+      //   background-size: auto 100px, 100px auto, 100px auto, 100px auto, auto 100px, 100px auto;
+      // }
+    }
+    }
+  }
+}
+
+.all-icons{
+  background-repeat: no-repeat;
+  // background-size: 70px auto;
+  background-size: auto auto;
+  min-height: 28rem;
+  @media(min-width:360px){
+    background-position:
+      3% 60px,
+      -9999px 0,
+      -9999px 0,
+      97% 60px,
+      -9999px 0,
+      -9999px 0;
+    }
+  @media(min-width:850px){
+    background-position:
+      3% 60px,
+      23% 40px,
+      -9999px 0,
+      97% 60px,
+      82% 40px,
+      -9999px 0;
+  }
+  // @media(min-width:14px){
+  //   background-position:
+  //     3% 60px,
+  //     10% 80px,
+  //     0px 0px,
+  //     calc(100% - 10px) 190px,
+  //     100% 80px,
+  //     calc(100% - 10px) 0px;
+  //   }
+  @media(min-width:1750px){
+    // background-size: 100px auto;
+    background-position: 
+    5% 25%,
+    7.5% 50%,
+    6% 75%,
+    95% 25%,
+    92.5% 50%,
+    94% 75%;
+  }
+  &.icons-group-1{
+    @media(min-width:360px){
+      background-image:
+        url('#{$icons}/sketched/dog/sketch-icon-dog-bowl.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-ball-bounce.png'),
+        url('#{$icons}/sketched/sketch-icon-ball-toy.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-bone-biscuit.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-leash.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-collar.png');
+    }
+  }
+  &.icons-group-2{
+    @media(min-width:360px){
+      background-image:
+        url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-mouse.png');
+    }    
+    // @media(min-width:$desk){
+    //   background-position: 
+    //     5% calc(20% + 100px),
+    //     7.5% calc(20% + 100px),
+    //     6% calc(20% + 100px),
+    //     95% calc(60% + 100px),
+    //     92.5% calc(60% + 100px),
+    //     94% calc(60% + 100px);
+    // }
+  }
+  &.icons-group-3{
+    @media(min-width:360px){
+      background-image:
+        url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+        url('#{$icons}/sketched/sketch-icon-pet-range-star.png'),
+        url('#{$icons}/sketched/dog/sketch-icon-rope-toy.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-wool-ball.png'),
+        url('#{$icons}/sketched/cat/sketch-icon-mouse.png'),
+        url('#{$icons}/sketched/healthcare/sketch-icon-bubble.png');
+      }    
+    // @media(min-width:$desk){
+    //   background-position: 
+    //     5% calc(20% + 100px),
+    //     7.5% calc(20% + 100px),
+    //     6% calc(20% + 100px),
+    //     95% calc(60% + 100px),
+    //     92.5% calc(60% + 100px),
+    //     94% calc(60% + 100px);
+    // }
+  }
+  &.full{
+    background-image:
+      url('#{$icons}/sketched/dog/sketch-icon-bed.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-collar-2.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-cat-bowl.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-cat-in-bed.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-collar.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-litter-tray.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-mouse.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-wool-ball.png'),
+      url('#{$icons}/sketched/wildlife/sketch-icon-hedgehog.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+      url('#{$icons}/sketched/sketch-icon-pet-range-star.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-pawprint.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-rope-toy.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-pawprint.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-rope-toy.png'),
+      url('#{$icons}/sketched/wildlife/sketch-icon-hedgehog.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+      url('#{$icons}/sketched/sketch-icon-pet-range-star.png'),
+      url('#{$icons}/sketched/dog/sketch-icon-pawprint.png'),
+      url('#{$icons}/sketched/cat/sketch-icon-fish.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-bubble.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-bowl-food.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-flea-treatment.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-flea.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-spray-can.png'),
+      url('#{$icons}/sketched/healthcare/sketch-icon-spray.png');      
+    background-position: 
+    20% 100px,10px 300px,30% 500px,20px 700px,35% 900px,25% 1100px,40px 1300px,40% 1500px,40px 1700px,20% 1900px,40px 2100px,30% 2300px,10px 2500px,calc(100% - 10px) 100px,70% 300px,calc(100% - 10px) 500px,calc(100% - 400px) 700px,calc(100% - 10px) 900px,calc(100% - 490px) 1170px,calc(100% - 10px) 1300px,calc(100% - 40px) 1500px,76% 1700px,calc(100% - 40px) 1900px,65% 2100px,calc(100% - 10px) 2300px,80% 2500px
+  }
+}

@@ -1,0 +1,175 @@
+.cs-button{
+  background:$red;
+  text-align: center;
+  padding: 1.3rem 2rem;
+  text-decoration: none;
+  color: $black;
+  box-shadow: none;
+  border-radius: 2px;
+  border: none;
+  margin: 0;
+  float: none;
+  display: block;
+  font-weight: 500;
+  @include transition(0.2s);
+  font-size: $sz-content;
+  line-height: normal;
+  width: fit-content;  
+  @media (min-width:$tab){
+    padding: 1.3rem 1rem;
+  }  
+  @media (min-width:1200px){
+    padding: 1.3rem 2rem;
+  }
+  &.full{
+    width: 100%;
+  }
+  &.wide{
+    min-width: 290px;
+  }
+  &.wider{
+    width: 380px;
+    max-width: 100%;
+  }
+  &.slim{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  &.red{
+    background-color: $red;
+    color: $black;
+  }
+  &.yellow{
+    background-color: $yellow;
+    color: $black;    
+  }
+  &.green{
+    background-color: $green;
+    color: $black;    
+  }
+  &.white{
+    background: white;
+    color: $black;
+  }
+  &.large{
+    @media(min-width:$tab-wide){
+      font-size: 2rem;
+      padding: 1.5rem 2.2rem;      
+    }
+  }
+  &.grey{
+    background-color: $grey;
+    color: $black;
+    &:hover{
+      background-color: $black;
+    }
+  }
+  &.icon{
+    text-align: left;
+    padding-left: 5.5rem;
+    background-repeat: no-repeat;
+    background-position: 15px 50%, -100px 50%;
+    &:hover{        
+      background-position: -100px 50%, 15px 50%;
+    }
+    &.after{
+      padding-left: 2rem;
+      padding-right: 5.5rem;      
+      background-position: calc(100% - 10px) 50%, calc(100% + 30px) 50%;
+      &:hover{        
+        background-position: calc(100% + 35px) 50%, calc(100% - 10px) 50%;
+      }
+    }
+    &.arrow{      
+      background-image: url('#{$icons}/icon-arrow-right-black.svg'), url('#{$icons}/icon-arrow-right-white.svg');
+    }
+    &.external{      
+      background-image: url('#{$icons}/icon-arrow-external.svg'), url('#{$icons}/icon-arrow-external-black.svg');
+    }
+    &.big-arrow{
+      background-image: url('#{$icons}/icon-arrow-right-black.svg'), url('#{$icons}/icon-arrow-right-white.svg');
+      background-size: 13px auto, 13px auto;
+      padding-right: 3rem;
+      background-position: calc(100% - 10px) 50%, calc(100% + 30px) 50%;
+      @media (min-width: $tab-wide){
+        padding-right: 6.5rem;
+        background-position: calc(100% - 20px) 50%, calc(100% + 30px) 50%;
+      }
+      &:hover{        
+        background-position: calc(100% + 35px) 50%, calc(100% - 10px) 50%;
+        @media (min-width: $tab-wide){
+          padding-right: 6.5rem;
+          background-position: calc(100% + 35px) 50%, calc(100% - 20px) 50%;
+        }
+      }
+    }
+    &.card{      
+      background-image: url('#{$icons}/icon-card.svg'), url('#{$icons}/icon-card-white.svg');
+      text-align: center;
+    }
+  }
+  &.dashed{
+    @include familyHeader();
+    font-size: 1.9rem;
+    padding-top: 2.3rem;
+    padding-bottom: 2.3rem;
+    position: relative;
+    @media (min-width: $tab-wide){
+      font-size: 1.4rem;
+    }
+    @media (min-width: $desk){
+      font-size: 1.9rem;
+    }
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url('#{$images}/lines-dashed.svg');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &.large{
+      font-size: 1.9em;
+      @media (min-width: $tab-wide){
+        font-size: 1.4rem;
+      }
+      @media (min-width: $desk){
+        font-size: 3rem;
+      }
+    }
+  }
+  &.fade{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  &:hover{
+    text-decoration: none;
+    opacity: 1;
+    border-bottom: 0;
+    background-color: $black;
+    color: white;
+  }
+  &.black{
+    background-color: $black;
+    color: white;
+    &:hover{
+      background-color: white;
+      color: $black;
+    }
+  }
+  &:disabled[disabled]{
+    background-color: #d4d4d4;
+    padding: 1.3rem 2rem;
+  }
+  &.left{
+    text-align: left;
+  }
+}
+
+.woocommerce button.button, .woocommerce a.button{
+  @extend .cs-button;
+}

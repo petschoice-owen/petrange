@@ -1,0 +1,68 @@
+
+h1, h2, h3, h4{
+  @include familyHeader();
+}
+
+h1, h2, h3, h4, p, a{
+  margin-top: 0;
+}
+
+h1, .h1{
+  font-size: clamp(2.5rem,3.5vw,5rem);
+  margin-bottom: clamp(1rem,4.1vw,6rem);
+  font-weight: 700;
+  color: $black;
+}
+
+h2, .h2{
+  font-size: clamp(3rem, 3.8vw, 4rem);
+  @media (min-width: $tab){
+    font-size: clamp(2rem, 3.8vw, 4rem);
+  }
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: $black;
+}
+
+h3, .h3{
+  font-size: clamp(2.5rem, 3vw, 3.2rem);
+  font-weight: 100;
+  margin-bottom: 4rem;
+  color: $black;
+}
+
+h4, .h4{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: $black;
+}
+
+h5, .h5{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+  color: $black;
+  font-weight: bold;
+}
+
+a{
+  color:$black;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+p{
+  margin-bottom: 3rem;
+  font-size: $sz-content;
+  line-height: $sz-line;
+  color: $black;
+  &.large{
+    font-size: 2.4rem;
+  }
+}
+
+strong, b, .bold{
+  font-weight: 600;
+}

@@ -1,0 +1,113 @@
+html{
+  font-size: 10px;
+  @media (min-width: $tab){    
+    font-size: 10px;
+  }
+}
+
+body{
+  margin: 0;
+  @include family(300);
+  font-size: $sz-content;
+  color: $black;
+  font-weight: 400;
+  /*counter-reset: section;*/
+}
+
+a{
+  text-decoration: underline;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+table{
+  border: solid 1px $bordergrey;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  tr{
+    th{
+      padding: 1rem 2rem;
+      border: solid 1px $bordergrey;
+    }
+    td{
+      padding: 1rem 2rem;
+      border: solid 1px $bordergrey;
+    }
+    &:nth-child(odd){
+      background: $powdergrey;
+    }
+  }
+}
+
+ul{
+  list-style: disc;
+  margin-left: 0;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  li{
+    margin-bottom: 1rem;
+    font-size: $sz-content;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+ol{
+  list-style: decimal;
+  margin-left: 0;
+  padding-left: 2rem;
+  margin-bottom: 3rem;
+  li{
+    margin-bottom: 1rem;
+    font-size: $sz-content;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+hr{
+  height: 1px;
+  display: block;
+  width: 100%;
+  background: $lightgrey;
+  margin-bottom: 3rem;
+}
+
+blockquote{
+  background: $powdergrey;
+  padding: 2rem 4rem;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3rem;
+  > *{
+    display: inline;
+    margin-bottom: 0;
+  }
+  &:before, &:after{
+    font-size: 4.5rem;
+    line-height: 2rem;
+    position: absolute;
+  }
+  &:before{
+    content: '“';
+    top: 2rem;
+    left: 1rem;
+  }
+  &:after{
+    content: '”';
+    right: 1rem;
+    bottom: 0;
+  }
+}

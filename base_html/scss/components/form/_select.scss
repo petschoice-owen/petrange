@@ -1,0 +1,30 @@
+select{
+  outline: solid 2px $black;
+  outline-offset: 0;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 1.3rem 4rem 1.3rem 2rem;
+  font-size: $sz-content;
+  border-radius: 4px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url('#{$icons}/icon-chevron-down-black.svg');
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  background-position: calc(100% - 15px) 50%;
+  &::-ms-expand {
+    display: none;
+  }
+  &:hover {
+    border-color: #888;
+  } 
+  &:focus {
+    border-color: #aaa;
+    color: #222;
+    outline: none;
+  }
+  option {
+  }
+}

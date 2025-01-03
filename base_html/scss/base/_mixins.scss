@@ -1,0 +1,49 @@
+/* Font setup */
+
+// @function calculateRem($size) {
+//   $remSize: calc($size / 16px);
+//   @return $remSize * 1rem;
+// }
+
+// @mixin font-size($size) {
+//   font-size: calculateRem($size);
+// } 
+
+/*
+Weights - adjust to font
+*/
+// 300 - Light
+// 400 - Regular
+// 600 - Semi bold
+// 700 - Bold
+// 800 - Heavy
+
+/* Family */
+
+@mixin family($weight){
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin familyHeader(){
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+
+
+/* Other */
+
+@mixin transition($speed){
+    transition: all ease $speed;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+      clear: both;
+    }
+}

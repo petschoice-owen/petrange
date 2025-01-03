@@ -1,0 +1,120 @@
+.filter{
+	margin-bottom: 4rem;
+}
+
+.filter-top{
+	background: $yellow;
+	padding: 1rem;
+	margin-bottom: 4rem;
+	select{
+		max-width: 430px;
+	}
+	form{
+		ul{
+			@extend .flex;
+			li{
+				margin-right: 1rem;
+				input[type="submit"]{
+					@extend .cs-button;
+				}
+			}
+		}
+	}
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		@extend .flex-mob;
+		@media(min-width:$tab-wide){
+			width: 450px;
+		}
+		li{
+			margin-bottom: 0;
+			width: calc(100% - 130px);
+			&:last-child{
+				width: 100px;
+				input[type="submit"]{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.custom-filters{
+	background: $yellow;
+	padding: 1rem 2rem;
+	margin-bottom: 3rem;
+	@media(min-width:$tab){
+		padding: 2rem;
+	}
+	@media(max-width:calc(60em + 1px)){
+		width: 100%;
+	}
+	.wpfFilterButtons{
+		.wpfClearButton{
+			@extend .cs-button;
+			@extend .yellow;
+			@extend .full;
+			@extend .slim;
+			min-height: 0;
+			text-decoration: underline;
+			text-transform: capitalize;
+		}		
+	}
+	.wpfFilterWrapper{
+		border-bottom: solid 1px #FDEBC5;
+		&[data-filter-type="wpfSortBy"]{
+			padding-bottom: 1.5rem;
+		}
+		&[data-filter-type="wpfOnSale"]{
+			border-bottom: none;
+		}
+	}
+	h3{
+		margin-bottom: 0;
+	}
+	.cs-toggle{
+		position: relative;
+		display: block;
+		width: 20px;
+		height: 20px;
+		margin-right: 1rem;
+		&:before, &:after{
+			display: block;
+			content: "";
+			width: 3px;
+			height: 20px;
+			@include transition(0.3s);
+			background: $black;
+			position: absolute;
+			top: 0;
+    		left: calc(50% - 1px);
+		}
+		&:before{
+		}
+		&:after{
+			transform: rotate(90deg);
+		}
+		&.active{
+			&:before{
+				transform: rotate(90deg);
+			}
+		}
+	}
+	.filter-content{
+		overflow: hidden;
+		height: 0;
+		@include transition(0.3s);
+		@media(min-width:$tab-wide){
+			height: 100%;
+		}
+	}
+}
+
+
+// Temp results hide?
+
+.woocommerce-result-count{
+	display: none;
+}

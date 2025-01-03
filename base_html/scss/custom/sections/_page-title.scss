@@ -1,0 +1,61 @@
+.page-title{
+	padding: 6rem 0 5rem 0;
+	text-align: center;
+	@media(min-width:$tab){
+		padding: 4rem 0 2.5rem 0;
+	}
+	&.w-icons{
+		:not(.icons-type-none){
+			.page-title-content{
+				@media(min-width:$tab){
+					width: calc(100% - 180px);
+					max-width: 380px;
+					margin: 0 auto;
+				}
+				@media(min-width:$tab-wide){
+					max-width: 540px;
+				}
+				@media(min-width:$desk){
+					width: 80%;
+					max-width: 920px;
+				}
+			}
+		}
+	}
+}
+
+.breadcrumb{
+	+ .site-content{
+		.page-title{
+			padding-top: 0;
+		}
+	}
+}
+
+.section-links{
+	display: flex;
+	justify-content: center;
+	margin-top: 5rem;
+	li{
+		margin: 0 2rem 3rem 2rem;
+		a{
+			display: block;
+			color: white;
+			background: $black;
+			padding: 1rem;
+		}
+	}
+}
+
+.sub-category-links{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	margin-top: 4.5rem;	
+	@media(max-width:$tab){
+		display: none;
+	}
+	li{
+		margin: 0 1rem 2rem;
+	}
+}

@@ -1,0 +1,45 @@
+.page.type-page{
+	padding-top: 6rem;
+	width: 100%;
+	.entry-header{
+		margin-bottom: 6rem;
+		h1{
+			margin-left: auto;
+    		margin-right: auto;
+		}
+	}
+	.entry-content{
+		flex-wrap: wrap;
+		margin-bottom: 3rem;
+		@media(min-width:$tab-wide){
+			margin-bottom: 5rem;
+			flex-wrap: nowrap;
+		}
+	}
+	.standard-page-content{
+		width: 100%;
+		margin-bottom: 5rem;
+		@media(min-width:$tab-wide){
+			margin-bottom: 0;
+		}
+	}
+	aside{
+		width: 100%;
+		@media(min-width:$tab-wide){
+			margin-left: 4rem;
+			width: 420px;
+		}
+		a{
+			margin-bottom: 1rem;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.news_blog{
+	.inner{
+		max-width: 900px;
+	}
+}

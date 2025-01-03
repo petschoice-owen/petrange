@@ -1,0 +1,80 @@
+.popular{
+	.col{
+	  &-3{
+	  }
+	}
+	.main-cta{
+		position: relative;
+		line-height: 0;
+		margin: 0 auto 1rem auto;				
+        max-width: 440px;
+      	@media (min-width: $tab){
+        	width: 32%;
+        	margin-bottom: 0;
+      	}
+      	&:after{
+	      max-width: 440px;
+	      @media (min-width: $tab){
+	        content:"";
+	        width: 32%;
+	        margin-bottom: 0;
+	      }
+	    }
+		h2{			
+			font-size: clamp(3rem, 12vw ,6rem);
+			line-height: normal;
+			text-align: center;
+			position: absolute;
+			top: 0;
+			right: 20px;
+			width: 60%;
+			@media (min-width: $tab){
+			 	font-size: clamp(1rem, 6vw, 6rem);
+				width: calc(100% - 40px);
+			}
+		}
+		img{
+			width: clamp(120px, 40%, 200px);
+			@media(min-width: $tab){
+				width: 100%;
+			}
+		}
+		.cs-button{
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			line-height: normal;
+			width: 60%;
+			@media(min-width:$tab){
+				width: calc(100% - 40px);
+			}
+		}
+		&.dog{
+			background: $yellow;
+		}
+		&.cat{
+			background: $green;
+		}
+		&.wildlife{
+			background: $red;
+		}
+	}
+	.mega-menu-cta{
+		position: relative;
+		line-height: 0;
+		padding: 1rem 2rem 2rem 2rem;
+		margin-bottom: 2rem;
+		h2{
+			font-size: 4.6rem;
+			line-height: normal;
+			margin-bottom: 1.5rem;
+		}
+		img{
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			width: auto;
+		}
+	}
+}

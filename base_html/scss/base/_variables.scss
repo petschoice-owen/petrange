@@ -1,0 +1,46 @@
+/* Var */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+
+/* Colours */
+
+$primary: #F9B118;
+
+$red: #F1601C;
+$green: #075F6E;
+$yellow: $primary;
+
+$lightred: #F5BBA8;
+$lightgreen: #A4BBC0;
+$lightyellow: #F9DDA7;
+
+$black: #292929;
+
+$grey: #EFEFEF;
+$lightgrey: #f7f7f7;
+$powdergrey: #f5f5f5;
+$greyd: #383838;
+
+$border: $black;
+$bordergrey: #c4c4c4;
+
+/* Breakpoints and Touch */
+
+$touch: pointer coarse, "no-query" ".touch";
+$tab: 44em;
+$tab-wide: 60em;
+$desk: 1400px;
+$desk-xl: 140em;
+
+/* Paths */
+
+$images : "../images";
+$icons : "#{$images}/icons";
+$hIcons : "#{$images}/header-icons";
+
+/* Base size */
+
+$sz-content: 1.6rem;
+$sz-line: 150%;

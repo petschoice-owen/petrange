@@ -1,0 +1,45 @@
+.have-coupon{
+	margin-top: 2rem;
+	.coupon-init{
+		border: none;
+		background: transparent;
+		padding: 0;
+		width: 100%;
+		font-size: 1.6rem;
+		margin-bottom: 1rem;
+		text-align: left;
+		padding-right: 3rem;
+		position: relative;
+		&:after{
+			content: "";
+			display: block;
+			width: 1.2rem;
+			height: 0.8rem;
+			position: absolute;
+			right: 0;
+			top: calc(50% - 4px);
+			background:url('#{$icons}/icon-full-arrow-down.svg');
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+			@include transition(0.3s);
+		}
+		&.active{
+			&:after{
+				transform: rotate(180deg);
+			}
+		}
+	}
+	button.button{
+		@extend .black;
+		width: 100%;
+	}
+	.coupon{
+		display: none;
+		input[type="text"]{
+			border: solid 3px $black;
+		}
+		&.active{
+			display: block;
+		}
+	}
+}

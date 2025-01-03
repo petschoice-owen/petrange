@@ -1,0 +1,12 @@
+.woocommerce-product-search{
+	@extend .flex;
+	@extend .no-wrap;
+	input[type="search"]{
+		@media (min-width: $tab){
+			margin-right: 2rem;
+		}
+	}
+	button{
+		@extend .button;
+	}
+}

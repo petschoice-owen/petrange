@@ -1,0 +1,53 @@
+.flex{
+  @media (min-width: $tab-wide){
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &.a-center{
+      align-items: center;
+    }
+    &.a-stretch{
+      align-items: stretch;
+    }
+    &.a-end{
+      align-items: flex-end;
+    }
+    &.jc-center{
+      justify-content: center;
+    }
+    &.jc-start{
+      justify-content: flex-start;
+    }
+    &.jc-space{
+      justify-content: space-between;
+    }
+    &.jc-end{
+      justify-content: flex-end;
+    }
+  }
+  &-mob{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    &.a-center{
+      align-items: center;
+    }
+    &.a-stretch{
+      align-items: stretch;
+    }
+    &.jc-center{
+      justify-content: center;
+    }
+    &.jc-start{
+      justify-content: flex-start;
+    }
+    &.jc-end{
+      justify-content: flex-end;
+    }
+  }
+  &.no-wrap{
+    flex-wrap: nowrap;
+  }
+}

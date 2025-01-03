@@ -1,0 +1,18 @@
+.wpcf7-submit{
+	@extend .cs-button;
+}
+
+.wpcf7-response-output{
+	@extend .notification;
+}
+
+.wpcf7-form{
+	max-width: 600px;
+	width: 100%;
+	margin: 0 auto;
+	&.sent{
+		.wpcf7-response-output{
+			@extend .green;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+.inner{
+  width: 90%;
+  margin: 0 auto;
+  @media (min-width: $desk){
+    max-width: 1400px;
+    &-1200{
+      max-width: 1200px;
+    }
+    &-1100{
+      max-width: 1100px;
+    }
+    &-1000{
+      max-width: 1000px;
+    }
+    &-800{
+      max-width: 800px;
+    }
+    &-500{
+      max-width: 500px;
+    }
+  }
+  .inner{
+    width: 100%;
+  }
+}

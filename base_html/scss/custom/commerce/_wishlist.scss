@@ -1,0 +1,120 @@
+.woocommerce{
+	.yith-wcwl-add-to-wishlist{
+		.fa{
+			font-family: 'FontAwesome';
+			font-weight: 100;
+		}
+		i{
+			// background-image:url('#{$icons}/icon-heart-outline.svg');
+			margin-right: 0;
+			&:before{
+				font-size: 2.7rem;
+			}
+		}
+	}
+	.product-listing{
+		.yith-wcwl-add-to-wishlist{
+			text-decoration: none;
+			@extend .flex-mob;
+			@extend .a-center;
+			position: absolute;
+			bottom: 0;
+			right: 1.5rem;
+			a{
+				span{
+					display: none;
+				}
+			}
+			.exists{
+				.fa{
+					color: $red;
+				}
+				.feedback, .delete_item{
+					font-size: 0;
+				}
+			}
+		}
+	}
+	.favourites-main{
+		a.add_to_wishlist, a.delete_item{
+			text-decoration: none;
+			padding: 1.5rem;
+			border-radius: 1rem;
+			@extend .flex-mob;
+			@extend .a-center;
+			@extend .bg-grey;
+			i{
+				color:$red;
+				margin-right: 2rem;
+			}
+		}		
+		.separator, .view-wishlist{
+			display: none;
+		}
+	}	
+	.wishlist-title-container{
+		display: none;
+	}	
+	table.wishlist_table{
+		border: none;
+		margin-bottom: 6rem;
+		thead{
+			tr{
+				border: none;
+				background: transparent;
+				th{
+					@include family(700);
+					line-height: normal;
+					margin-bottom: 0;
+					padding: 0.9rem 2rem 1.5rem 2rem;
+					border: none;
+					font-size: 1.6rem;
+				}
+			}
+		}
+		tbody{
+			tr{
+				background: white;
+				margin-bottom: 0.5rem;
+				td{
+					padding: 2rem;
+					border: none;
+					font-size: 1.6rem;
+				}
+			}
+		}
+		.product-remove{
+			a, a:hover{
+				width: 22px;
+				height: 22px;
+				text-align: center;
+				background:url('#{$icons}/icon-bin.svg');
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-color: transparent;
+				border-radius: 0;
+				&:before{
+					content: none;
+				}
+			}
+		}
+		.product-thumbnail{
+			width: 10rem;
+			a{
+				display: block;
+				width: 100%;
+			}
+		}
+		.product-add-to-cart{
+			a{
+				@extend .button;
+			}
+		}
+	}
+}
+
+// Below might need to be re-added
+
+#yith-wcwl-popup-message{
+	display: none !important;
+}

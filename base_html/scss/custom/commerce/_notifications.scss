@@ -1,0 +1,32 @@
+.notification-alt{
+	padding: 2rem;
+	width: 100%;
+	border: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row-reverse;
+	border-radius: 10px;
+	&:before, &:after{
+		content: none;
+	}
+	p{
+		&:last-child{
+			margin-bottom: 0;	
+		}
+	}
+}
+
+.woocommerce-message, .woocommerce-Message{
+	@extend .notification-alt;
+}
+
+.woocommerce-info{
+	@extend .notification;
+	@extend .neutral;
+	flex-direction: row;
+}
+
+.woocommerce-page .woocommerce-error {
+    width: 100%;
+}

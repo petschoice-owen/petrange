@@ -1,0 +1,110 @@
+footer.main-footer{
+	.footer-logo{
+		margin-bottom: 2rem;
+		width: 100%;
+		max-width: 100%;
+		@media (min-width: $tab-wide){
+			width: 17.714%;
+			max-width: 248px;
+			margin-bottom: 0;
+		}
+		img{
+			max-width: 180px;
+		}
+	}
+	.menu{
+		margin-bottom: 1rem;
+		@media (min-width: $tab-wide){
+			margin: 0;
+		}
+		&-1{
+			margin: 0 auto 1rem auto;
+			@media (min-width: $tab-wide){
+				margin: 0;
+			}
+		}
+		&-2{
+			margin: 0 auto 1rem auto;
+			@media (min-width: $tab-wide){
+				margin: 0;				
+			}
+		}
+		&-3{
+			margin: 0 auto 1rem auto;
+			@media (min-width: $tab-wide){
+				margin: 0;				
+			}
+		}
+	}	
+	.col-5 > *:not(.footer-logo){
+		@media (max-width: $tab){
+			width: calc((100% - 10px) / 2);
+			margin: 0 0 4rem 0;
+		}
+	}
+	.footer-last{
+		margin: 0 auto;
+		@media(min-width:$tab-wide){
+			margin: 0;
+		}
+		a{
+			display: block;
+			width: fit-content;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 0.3rem;
+		}
+	}
+	p.bold{
+		margin-bottom: 0.5rem;
+	}
+	nav{
+		margin-bottom: 1rem;
+		@media (min-width: $tab-wide){
+			margin-bottom: 0;
+		}
+	}
+	ul{
+		display: block;
+		li{
+			display: block;
+		}
+		&.socials{
+			@extend .flex-mob;
+			@extend .jc-center;
+			margin-top: 2rem;
+			padding-bottom: 0;
+			@media (min-width: $tab-wide){
+				justify-content: center;
+			}
+			li{
+				margin-right: 3rem;
+				&:last-child{
+					margin-right: 0;
+				}
+				a{
+					display: block;
+					img{
+						height: 30px;
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+	.col-5{
+		>*{
+			text-align: center;
+		}
+	}
+}
+
+.post-footer{
+	text-align: center;
+	padding: 1.2rem 0;
+	p{
+		color: white;
+		font-size: 1.6rem;
+		margin-bottom: 0;
+	}
+}

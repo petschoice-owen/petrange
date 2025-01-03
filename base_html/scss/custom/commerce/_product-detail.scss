@@ -1,0 +1,242 @@
+.woocommerce{
+	span.onsale{
+		position: absolute;
+		width: fit-content;
+		height: auto;
+		line-height: normal;
+		font-size: 1.5rem;
+		padding: 1rem 1.5rem;
+		border-radius: 0.5rem;
+		min-height: 0;
+		min-width: 0;
+		top: auto;
+    	bottom: 100%;
+	}
+	section.product-details{
+		margin-top: 4rem;
+		.product{
+			@extend .flex;
+			.woocommerce-product-gallery{
+				.flex-viewport{
+					border: solid 2px $black;
+					margin-bottom: 3rem;
+				}
+				> .woocommerce-product-gallery__wrapper{
+					border: solid 2px $black;
+					margin-bottom: 3rem;					
+				}
+			}
+			.woocommerce-product-gallery--columns-4{
+				.flex-control-thumbs{
+					display: flex;
+					li{
+						&:nth-child(4n+1){
+
+						}
+					}
+				}
+			}
+			div.images{
+				ol{
+					justify-content: flex-start;
+				}
+				li{
+					width: calc(25% - 30px);
+					border: 2px solid $black;
+					padding: 10px;
+					margin-right: 40px;
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+				img{
+					opacity: 1;
+				}
+			}
+			.product_title{
+				width: 100%;
+			}
+		}
+		.woocommerce-product-details__short-description{
+			ul{
+				@extend .paws;
+			}
+		}
+		.top{
+			margin-bottom: 3rem;
+			+ .price{
+				display: none;
+			}
+		}
+		.feefo-reviews-tab{
+			background: $grey;
+			padding: 0.5rem;
+			img{
+				width: auto;
+			}
+			span{
+				background-image:url('#{$icons}/icon-full-arrow-down.svg');
+				background-repeat: no-repeat;
+				background-position: calc(100% - 10px) 50%;
+				padding: 0.5rem 3rem 0.5rem 0.5rem;
+			}
+		}
+		.add-to-wishlist{
+			background: $grey;
+			padding: 0.5rem;
+			border: none;
+			span{
+				
+			}
+		}
+		span.price{
+			color: $green;
+			font-size: 3.8rem;
+			font-weight: 600;
+			margin-bottom: 1.5rem;
+			display: flex;
+			align-items: flex-end;
+    		flex-direction: row-reverse;
+    		justify-content: flex-end;    		
+			del{
+				color: $red;
+				font-size: 0.8em;
+			}
+    		ins{
+    			text-decoration: none;
+    		}
+			del{
+				font-size: 2.6rem;
+				color: #7E7E7E;
+				margin-left: 2rem;
+			}
+		}
+		p.price{
+			color: $green;
+			del{
+				color: $red;
+				font-size: 0.8em;
+			}
+		}
+		.product-option, .woocommerce-variation-availability{
+			background: $grey;
+			@extend .p-20;
+			@extend .radius;
+			width: 100%;
+			@media(min-width:$tab-wide){
+				max-width: 420px;				
+			}
+			margin-bottom: 3rem;
+			select{
+				margin-bottom: 2rem;
+			}
+			.price{
+				margin-bottom: 0;
+			}
+			& + form{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				@media(min-width:$tab-wide){
+					max-width: 420px;				
+				}
+				button{
+					width: 100%;
+				}
+			}
+		}
+		.st-add-to-basket{
+			@extend .flex;
+			.qty_wrapper{
+				label{
+					display: none;
+				}
+			}
+			.row{
+				width: 100%;
+				max-width: 420px;
+				@extend .flex;
+				button[type="submit"]{
+					width: calc(100% - 122px);
+					@extend .cs-button;
+					@extend .black;
+				}
+			}
+		}
+		.single_variation_wrap{
+			width: 100%;
+			.woocommerce-variation-add-to-cart{
+				@extend .flex-mob;
+				flex-wrap: nowrap;
+			}
+		}
+		.stock{
+			width: 100%;
+			@media(min-width:$tab-wide){
+				max-width: 420px;
+			}
+		}
+		.cwginstock-subscribe-form{
+			width: 100%;
+			@media(min-width:$tab-wide){
+				max-width: 420px;
+			}
+			.panel-primary{
+				border: none;
+				>.panel-heading{
+					background: $yellow;
+					border: none;
+					h4{
+						color: $black;
+						margin-bottom: 0;
+					}
+				}					
+				.cwgstock_button{
+					@extend .cs-button;
+					@extend .full;
+				}
+			}
+		}
+		.woocommerce-variation-availability{
+			@extend .flex-mob;
+			flex-wrap: wrap;
+			.woocommerce-variation-price, p.stock{
+				width: 50%;
+			}
+			p.stock{
+				text-align: right;
+			}
+			.cwginstock-subscribe-form{
+				width: 100%;
+			}
+		}
+	}
+	.wc-tabs{
+		li{
+			position: relative;
+			text-align: left;
+		}
+	}
+	table{
+		&.variations{
+			tr{
+				background: transparent;
+			}
+		}
+	}
+	.product-more-info{
+		clear: both;
+	}
+}
+.woocommerce{
+	.wt-related-products{
+		ul.products.columns-3{
+			li.product{
+				@media (min-width: 768px){
+					width: 22.05%;
+				}
+			}
+		}
+	}
+}
+

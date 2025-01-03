@@ -1,0 +1,252 @@
+.woocommerce-cart, .woocommerce-checkout{
+	.entry-header{
+		@extend .inner;
+	}
+	.entry-content{
+	}
+}
+
+/* Cart page */
+
+.quantity{
+	@extend .flex-mob;
+	@extend .a-center;
+	@extend .jc-end;
+	min-width: 14rem;
+	@media(min-width:$tab-wide){
+		justify-content: flex-start;
+	}
+	.minus.button, .plus.button{
+		padding: 1rem;
+		background: white;
+		&:hover{
+			background: white;
+		}
+	}
+	input[type="number"]{
+		min-width: 75px;
+		text-align: left;
+	}
+}
+
+.woocommerce{
+	.woocommerce-cart-form{
+		table{
+			border: none;
+			border-radius: none;
+			thead{
+				tr{
+					border: none;
+					background: transparent;
+					th{
+						@include family(700);
+						line-height: normal;
+						margin-bottom: 0;
+						padding: 0.9rem 2rem 1.5rem 2rem;
+						border: none;
+						font-size: 1.6rem;
+					}
+				}
+			}
+			tbody{
+				tr{
+					background: white;
+					margin-bottom: 0.5rem;
+					td{
+						padding: 2rem;
+						border: none;
+						font-size: 1.6rem;
+					}
+				}
+			}
+			.product-remove{
+				a{
+					width: 22px;
+					height: 22px;
+					text-align: center;
+					background:url('#{$icons}/icon-bin.svg');
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+					border-radius: 0;
+					&:before{
+						content: none;
+					}
+				}
+			}
+			.product-thumbnail{
+				width: 10rem;
+				a{
+					display: block;
+					width: 100%;
+				}
+			}
+		}
+	}
+	.cart-collaterals{
+		table{
+			border: none;
+			tbody{
+				tr{
+					background: white;
+					margin-bottom: 0.5rem;
+					td, th{
+						padding: 0.9rem 1rem;
+						border: none;
+						&:first-child{
+							padding-left: 0;
+						}
+						&:last-child{
+							padding-right: 0;
+							text-align: right;
+						}
+					}
+					&:last-child{
+						margin-bottom: 1rem;
+						td, th{
+							border-bottom: solid 1px #EDEDED;
+						}
+					}
+				}
+			}
+		}
+		h5{
+			@include family(700);
+			line-height: normal;
+			display: block;
+			margin-bottom: 0;
+			padding: 0.9rem 1rem 1.5rem 1rem;
+			font-size: 1.6rem;
+			text-align: center;
+		}
+		.cart-collaterals-inner{
+			@extend .p-30;
+			@extend .bg-white;
+			margin-bottom: 5rem;
+		}
+		&:before{
+			content: none;
+		}
+		.cart_totals{
+			width: 100%;
+			float: none;
+		}
+		.button{
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+	}
+	> .inner.cart-inner{
+		.cart-empty{
+			border: none;
+			text-align: center;
+			padding-left: 2rem;
+			&:before{
+				content: none;
+			}
+			&:after{
+				content: none;
+			}
+		}
+		.return-to-shop{
+			margin-right: 0;
+			width: 100%;
+			text-align: center;
+			.button{
+				margin: 0 auto;
+			}
+		}
+		.woocommerce-notices-wrapper{
+			width: 100%;
+		}
+		> form{
+			width: 100%;
+			margin-bottom: 3rem;
+			@media(min-width:$desk){
+				width: 77.1428%;
+				margin-bottom: 0;
+			}
+		}
+		> *:last-child:not(.return-to-shop){
+			@media(min-width:$desk){
+				width: calc(22.8572% - 40px);
+			}
+		}
+	}
+	form{
+		.form-row{
+			textarea{
+				display: block;
+				width: 100%;
+				padding: 1.1rem 1.5rem;
+				font-size: $sz-content;
+				border-radius: 4px;
+				border: solid 1px $black;
+				height: 10rem;
+				@include family(400);
+			}
+		}
+	}
+	.wc-proceed-to-checkout{
+		a{
+			&:last-child{
+				margin-bottom: 0;
+				&:after{
+					content: none;
+				}
+			}
+		}
+	}
+}
+
+.after-table{
+	@extend .flex;
+	@extend .jc-end;
+	width: 100%;
+}
+
+/* Checkout page */
+
+form.woocommerce-checkout{
+	@extend .flex;
+	@extend .col-2;
+	.woocommerce-checkout-review-order{
+		&-table{
+			border: none;
+		}
+		tr{
+			background: white;
+			margin-bottom: 0.5rem;
+			td, th{
+				padding: 0.9rem 1rem;
+				border: none;
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					padding-right: 0;
+					text-align: right;
+				}
+			}
+			&:last-child{
+				margin-bottom: 1rem;
+				td, th{
+					border-bottom: solid 1px #EDEDED;
+				}
+			}
+		}
+	}
+	#payment{
+		background: transparent;
+	}
+}
+
+.woocommerce-checkout-payment{
+	#place_order{
+		@extend .cs-button;
+		@extend .yellow;
+	}
+}
+
+.woocommerce-NoticeGroup{
+	width: 100%;
+}

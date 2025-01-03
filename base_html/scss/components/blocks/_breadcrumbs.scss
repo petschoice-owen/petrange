@@ -1,0 +1,30 @@
+.breadcrumb{
+	padding: 2rem 0 0 0;
+	.custom-breadcrumb{
+		.woocommerce-breadcrumb{
+			@extend .flex;
+			@extend .jc-start;
+			@extend .a-stretch;
+			font-size: 1.6rem;
+			color: $black;
+			margin-bottom: 1rem;
+			a, span{
+				color: $black;
+				font-size: 1.6rem;
+				&:first-of-type::before{
+					content: none;
+				}
+			}
+			.breadcrumb-separator{
+				width: 8px;
+				padding: 0 1.5rem;
+				background:url('#{$icons}/icon-small-chevron-right.svg');
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				&:after{
+					content: none;
+				}
+			}
+		}
+	}
+}

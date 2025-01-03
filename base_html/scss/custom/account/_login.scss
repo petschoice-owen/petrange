@@ -1,0 +1,33 @@
+.woocommerce{
+	.login-forms{
+		margin-bottom: 5rem;
+		> div{
+			max-width: 440px;
+			margin: 0 auto;
+			@media(min-width:$tab-wide){
+				margin: 0;
+			}
+		}
+		.u-column1{
+			border-bottom: solid 1px $grey;
+			padding-bottom: 6rem;
+			margin-bottom: 6rem;
+			@media(min-width:$tab-wide){
+				border-right: solid 1px $grey;
+				padding: 0 6rem 0 0;
+				margin-bottom: 0;
+			}
+		}
+		.u-column2{
+			@media(min-width:$tab-wide){
+				padding: 0 0 0 6rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+	form.login{
+		border: none;
+		padding: 0;
+		text-align: center;
+	}
+}

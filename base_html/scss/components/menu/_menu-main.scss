@@ -1,0 +1,36 @@
+nav, .secondary-nav{
+  ul{
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    display: none;
+    @media(min-width:$tab-wide){
+      display: flex;
+    }
+    li{
+      list-style-type: none;
+      list-style: none;
+      position: relative;
+      a{
+        text-align: center;
+        @media(min-width:$tab-wide){
+          text-align: left;
+        }
+        + ul{
+          display: none;
+        }
+      }
+      &:hover > a + ul{
+        @media (min-width: $tab-wide){
+          display: block;
+          position: absolute;
+          top: 100%;
+        }
+        a{
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

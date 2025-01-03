@@ -1,0 +1,154 @@
+/* Reusable elements */
+
+/* Colour backgrounds */
+
+.bg-{
+	&yellow{
+		background: $yellow;
+	}
+	&green{
+		background: $green;
+		h1, h2, h3, h4, h5, p{
+			color: white;
+		}
+	}
+	&red{
+		background: $red;		
+	}
+	&yellow-fade{
+		background: $lightyellow;
+	}
+	&green-fade{
+		background: $lightgreen;		
+	}
+	&red-fade{
+		background: $lightred;		
+	}
+}
+
+.radius{
+  border-radius: 10px;
+}
+
+.border{
+  border: solid 1px $black;
+}
+
+.ta{
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: left;
+  }
+  &-center{
+    text-align: left;
+  }
+}
+
+/* Colour class uses */
+
+h1, h2, h3, h4, h5, p{
+	span{
+		&.red{
+			color:$red;
+		}
+		&.yellow{
+			color:$yellow;
+		}
+		&.green{
+			color:$green;
+		}
+	}
+}
+
+/* Backgrounds */
+
+.lines{
+	background: url('#{$images}/lines-header.svg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.bg-grey{
+	background-color: $grey;
+}
+
+.lightgrey{
+	background-color: $lightgrey;
+}
+
+.bg-black{
+	background-color: #101010;
+}
+
+.bg-white{
+	background: white;
+}
+
+.radius{
+	border-radius: 4px;
+}
+
+/* Border */
+
+.bb{
+	border-bottom: solid 7px;
+	&.yellow{
+		border-bottom-color: $yellow;
+	}
+}
+
+/* Spacers */
+
+.p{
+	&-20{
+		padding: 2rem;
+	}
+	&-30{
+		padding: 3rem;
+	}
+	&-40{
+		padding: 3rem;
+	}
+	&-50{
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+	&-60{
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+	&t-20{
+		padding-top: 6rem;
+	}
+	&t-40{
+		padding-top: 4rem;
+	}
+	&t-60{
+		padding-top: 6rem;
+	}
+}
+
+/* Videos */
+
+.video{
+	iframe, video{
+		border: solid 10px $yellow;
+	}
+
+}
+
+/* Custom lists */
+
+ul.paws{
+	padding-left: 0;
+	li{
+		padding-left: 2.5rem;
+		list-style: none;
+		background: url(#{$icons}/icon-bullet-paw.svg);
+		background-repeat: no-repeat;
+		background-position: 0 3px;
+		margin-bottom: 2rem;
+	}
+}

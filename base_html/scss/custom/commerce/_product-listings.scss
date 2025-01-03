@@ -1,0 +1,140 @@
+.products-full-listing{
+	.products{
+		@extend .flex-mob;
+		@extend .a-stretch;
+		@extend .jc-space;
+		@media(min-width:$tab-wide){
+			justify-content: space-between;
+		}
+		.product{
+			@extend .flex-mob;
+			float: none;
+			.listing-content{
+				align-self: flex-end;
+				width: 100%;
+			}
+		}
+		&:before{
+			content: none !important;
+		}
+	}
+}
+
+ul.products{
+	li.product-listing{
+		border: solid 2px #7E7E7E;
+		background: white;
+		.listing-top{
+			position: relative;
+			padding: 1.5rem;
+			.label{
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				padding: 0.5rem 1rem;
+				background: $red;
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: $sz-content;
+			}
+			.favourite{
+				position: absolute;
+				bottom: 2rem;
+				right: 2rem;
+			}
+		}
+		.listing-content{
+			padding: 1.5rem;
+			h2.woocommerce-loop-product__title{
+				@include family(600);
+				font-size: 2rem;
+				margin-bottom: 1rem;
+				text-align: left;
+			}
+			.price{
+				color: $green;
+				font-size: 1.8rem;
+				font-weight: 600;
+				margin-bottom: 1.5rem;
+				text-align: left;
+				del{
+					color: $red;
+    				font-size: 0.8em;
+    			}
+			}
+			.stock{
+				padding: 0.5rem 1rem;
+				background: $lightgreen;
+				display: inline-block;
+				font-size: $sz-content;
+				margin-bottom: 1.5rem;
+				text-align: left;
+			}
+			a.button{
+				width: 100%;
+				margin-bottom: 0;
+				@extend .black;
+			}
+		}
+		&.alt{			
+  			outline: solid 2px $black;
+			.listing-content{
+				background: $black;
+				h3{
+					@include family(600);
+					font-size: 2.2rem;
+					margin-bottom: 1rem;
+					color: white;
+				}
+				.price{
+					color: $yellow;
+					font-size: 3rem;
+					font-weight: 600;
+					margin-bottom: 1.5rem;
+				}
+				.stock{
+					padding: 0.5rem 1rem;
+					background: $yellow;
+					display: inline-block;
+					font-size: $sz-content;
+					margin-bottom: 1.5rem;
+				}
+			}		
+		}
+	}
+}
+
+.woocommerce{
+	nav.woocommerce-pagination{
+		margin-bottom: 5rem;
+		ul.page-numbers{
+			border: none;
+			li{
+				padding: 0 0.4rem;
+				display: block;
+				border: none;
+				@media(min-width:$tab-wide){
+					padding: 0 0.7rem;
+				}
+				a{
+					background: $yellow;
+					padding: 1.3rem 0.5rem;
+					text-decoration: none;
+					font-weight: 800;
+					min-width: 35px;
+    				text-align: center;
+    				@media(min-width:$tab-wide){
+						padding: 1.3rem 1.5rem;    					
+    				}
+				}
+				span{				
+					padding: 1.3rem 1.5rem;
+					&.dots{
+						padding-left: 0.3rem;
+						padding-right: 0.3rem;
+					}
+				}
+			}
+		}
+	}
+}
